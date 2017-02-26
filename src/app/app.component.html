@@ -1,0 +1,22 @@
+<div id="color-bar">
+    <div id="nav-bar">EasyApp</div><!-- End Nav Bar -->
+          <div *ngIf="!isLogged">
+            <p class="navbar-text navbar-right">Logged out</p>
+
+          </div>
+
+
+</div><!-- End color Bar -->
+
+  <div id="content">
+          <h2 class="title white center">Angular2 OAuth2</h2> 
+        <h3 class="sub-title white center"> Social Login Demo</h3>
+
+            <div *ngIf="!isLogged" class="login"> Login to your account </div>
+          <router-outlet></router-outlet>
+          <div *ngIf = "isLogged">
+            <p>Logged in : Name : {{user_Name}}  , Email : {{user_Email}}</p>
+          </div>
+  </div><!-- End Nav content -->
+
+
