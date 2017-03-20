@@ -1,0 +1,13 @@
+<div *ngIf="!utilisateurConnecte">
+    <div class="barre" >
+        <img id="logo1" src="../../assets/images/logo1.png">
+        <span class="app-name">Easy</span>
+    </div>
+
+    <div><img id="logo2" src="../../assets/images/logo2.png"></div>
+    <div class="bienvenu"><span>Bienvenue à </span><span class="app-name">Easy</span></div>
+    <button id="login-button" (click)="connecter()">Login</button>
+</div>
+<div *ngIf="utilisateurConnecte">
+    <gestion-annee></gestion-annee>
+</div>

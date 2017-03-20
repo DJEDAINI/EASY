@@ -1,0 +1,72 @@
+<div id=entete>
+    <md-toolbar class="toolbar">
+        <div class="enteteContainer">
+            <div class="item"><h1>Easy</h1></div>
+            <div class="centerContainer">
+                <div class="item"><md-icon id="user" svgIcon='person'></md-icon></div>
+                <div class="item"><h2>{{nom}} {{prenom}}</h2></div>
+            </div>
+            <div class="item"><button>Logout</button></div>
+        </div>
+    </md-toolbar>
+
+    <div class="manu-bar">
+        <div class="espace"></div>
+        <div class="menu">
+            <div [class]="classMenus[0]" (click)="selectionner(0)" [routerLink]="['/Profil']">
+                <div></div>
+                <md-icon class="menu-icone" svgIcon="person"></md-icon>
+                <div></div>
+            </div>
+
+            <div [class]="classMenus[1]" (click)="selectionner(1)" [routerLink]="['/AnneeScolaire']">
+                <div></div>
+                <md-icon class="menu-icone" svgIcon="school"></md-icon>
+                <div></div>
+            </div>
+
+            <div [class]="classMenus[2]" (click)="selectionner(2)">
+                <div></div>
+                <md-icon class="menu-icone" svgIcon="specialite"></md-icon>
+                <div></div>
+            </div>
+
+            <div [class]="classMenus[3]" (click)="selectionner(3)" [routerLink]="['/Programmes']">
+                <div></div>
+                <md-icon class="menu-icone" svgIcon="book"></md-icon>
+                <div></div>
+            </div>
+
+            <div [class]="classMenus[4]" (click)="selectionner(4)" [routerLink]="['/Enseignants']">
+                <div></div>
+                <md-icon class="menu-icone" svgIcon="teacher"></md-icon>
+                <div></div>
+            </div>
+        </div>
+        <div class="espace"></div>
+    </div>
+
+    <div class="text-menu">
+        <div  [class]="classMenus[0]" (click)="selectionner(0)" [routerLink]="['/Profil']">
+            Profil
+        </div>
+
+        <div [class]="classMenus[1]" (click)="selectionner(1)" [routerLink]="['/AnneeScolaire']">
+            Années Scolaires
+        </div>
+
+        <div [class]="classMenus[2]" (click)="selectionner(2)">
+            Niveaux et Spécialités
+        </div>
+        <div [class]="classMenus[3]" (click)="selectionner(3)" [routerLink]="['/Programmes']">
+            Programmes
+        </div>
+        <div [class]="classMenus[4]" (click)="selectionner(4)" [routerLink]="['/Enseignants']">
+            Enseignants
+        </div>
+    </div>
+</div>
+
+<router-outlet>
+</router-outlet>
+
